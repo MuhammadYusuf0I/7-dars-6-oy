@@ -18,7 +18,7 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Product from "./pages/Product";
 import Login from "./pages/Login";
-import Singup from "./pages/Singup";
+import Signup from "./pages/Singup";
 import { onAuthStateChanged } from "firebase/auth";
 import { auth } from "./firebase/firebaseConfin";
 //actions
@@ -69,8 +69,8 @@ function App() {
       action: LoginActions,
     },
     {
-      path: "/singup",
-      element: user ? <Navigate to="/" /> : <Singup />,
+      path: "/signup",
+      element: user ? <Navigate to="/" /> : <Signup />,
       action: SignupActions,
     },
   ]);
