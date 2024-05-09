@@ -25,6 +25,7 @@ function useSingup() {
       .then((result) => {
         GoogleAuthProvider.credentialFromResult(result);
         const user = result.user;
+        console.log(user);
         dispatch({ type: "LOG_IN", payload: user });
         toast.success("Welcome");
       })
@@ -41,6 +42,7 @@ function useSingup() {
   };
 
   const registerWithEmailAndPassword = (actionData) => {
+    console.log(actionData);
     createUserWithEmailAndPassword(auth, actionData.email, actionData.password)
       .then(async (userCredential) => {
         // Signed up

@@ -2,7 +2,7 @@ import { signInWithEmailAndPassword } from "firebase/auth";
 import { useActionData } from "react-router-dom";
 import toast from "react-hot-toast";
 import { GlobalContext } from "../context/useGlobal";
-import { useContext } from "react";
+import { act, useContext } from "react";
 
 import { auth } from "../firebase/firebaseConfin";
 
